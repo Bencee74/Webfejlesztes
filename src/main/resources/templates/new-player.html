@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> New player </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+<div class="container my-5">
+    <h3> New player </h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-10">
+                <form action="#" th:action="@{/create}" th:object="${player}"
+                      method="post">
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="id" class="col-form-label">ID</label>
+                            <input type="text" th:field="*{id}" class="form-control"
+                                   id="id" placeholder="id" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label">Name</label>
+                            <input type="text" th:field="*{name}" class="form-control"
+                                   id="name" placeholder="Name" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="age" class="col-form-label">age</label>
+                            <input type="text" th:field="*{age}" class="form-control"
+                                   id="age" placeholder="Age" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="nationality" class="col-form-label">Nationality</label>
+                            <input type="text" th:field="*{nationality}" class="form-control"
+                                   id="nationality" placeholder="Nationality" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="club" class="col-form-label">Club</label>
+                            <input type="text" th:field="*{club}" class="form-control"
+                                   id="club" placeholder="Club" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="shirtNumber" class="col-form-label">ShirtNumber</label>
+                            <input type="text" th:field="*{shirtNumber}" class="form-control"
+                                   id="shirtNumber" placeholder="ShirtNumber" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="position" class="col-form-label">Position</label>
+                            <input type="text" th:field="*{position}" class="form-control"
+                                   id="position" placeholder="Position" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-primary" value=" Submit ">
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
